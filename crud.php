@@ -22,7 +22,7 @@ function create ($data){
 function del ($id){
     $conn = include_once (__DIR__.'/conexao.php');
 
-    $sql ="DELETE FROM shoesgo1 Where id = 8";
+    $sql ="DELETE FROM shoesgo1 Where id = $id";
     $conn ->query($sql);
 }
 

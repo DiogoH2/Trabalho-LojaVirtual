@@ -12,6 +12,7 @@ if(isset($_POST['enviar'])){
 
 }
 
+
 if(isset($_POST['excluir'])){
 
     del ($_POST['id']);

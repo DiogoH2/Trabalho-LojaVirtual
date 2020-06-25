@@ -8,12 +8,13 @@
                  </a>
               </div>
               <hr>
-                <form action="./SysLog.php" method="post">
+                <form action="./login.php" method="post">
                 <div class="row">
                 <div class="offset-9">
-                  <input type="text" name="user" size="10"  placeholder="Login">  
+                  <input type="text" name="nome" size="10"  placeholder="nome">  
                   <input type="password" name="senha" size="10"  placeholder="Senha"> 
-                  <button type="submit" name="enviar">Logar</button> 
+                  <button type="submit" name="entrar">Logar</button> 
+                  <a href="logout.php">Logout</a>
                  </div> 
                  </div>
                  </form>
@@ -25,6 +26,7 @@
                     <a class="menu" href="index.php">Home</a>
                     <a class="menu" href="chat.php">Comentarios</a>
                     <a class="menu" href="Produtos.php">Produtos</a>
+                    <a class="menu" href="Acesso.php">Acesso</a>
                   </div>  
             </nav> 
             </header> 
