@@ -10,14 +10,14 @@
 
         session_start();
         $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
-        echo "<script>window.location = 'chat.php'</script>";
+        echo "<script>window.location = '../index.php'</script>";
      }else{
-      echo "<script>window.location = 'index.php'</script>";
+      echo "<script>window.location = '../index.php'</script>";
 
      }
 
   }else{
-    echo  "<script>window.location = 'index.php'</script>";
+    echo  "<script>window.location = '../index.php'</script>";
 
 
   }
