@@ -7,9 +7,9 @@
     $html = ' ';
     foreach ($registro as $registros){
         $html .= "<tr>
-                        <td WIDTH=2>{$registros['id']}</td>
-                        <td WIDTH=150>{$registros['Usuario']}</td>
+                        <td WIDTH=2 hidden>{$registros['id']}</td>
                         <td>{$registros['Comentario']}</td>
+                        <td WIDTH=10><button type=submit name=excluir>Deletar</button></td>
                  </tr>
         ";
     }

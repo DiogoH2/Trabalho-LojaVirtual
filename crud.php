@@ -2,7 +2,7 @@
 
 function read(){
     $conn = include_once (__DIR__.'/conexao.php');
-    $sql = 'SELECT * FROM shoesgo1';
+    $sql = 'SELECT * FROM shoes';
     $result = $conn->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
@@ -13,17 +13,20 @@ function create ($data){
     $campo =implode (",",array_keys($data));
     $valores =implode ("','",$data);
 
-    $sql = "INSERT INTO shoesgo1 ($campo) Values ('$valores')";
+    $sql = "INSERT INTO shoes ($campo) Values ('$valores')";
 
     $conn ->query($sql);
 }
 
 
 function del ($id){
+
+
     $conn = include_once (__DIR__.'/conexao.php');
 
-    $sql ="DELETE FROM shoesgo1 Where id = $id";
+    $sql ="DELETE FROM shoes Where id = id";
     $conn ->query($sql);
 }
+
 
 ?>

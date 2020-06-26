@@ -19,18 +19,15 @@
     <article class="coment">
     <form action="Crud/controller.php" method="post">
           <div style="margin: 10px auto"> 
-            <input type="text" name="id" size="2" maxlength="2"  placeholder="Id">
             <input type="text" name="comentario" size="100"  placeholder="Deixe seu comentario aqui!!!">
           </div>
           <div style="margin: 5vh auto">
             <button type="submit" name="enviar">Enviar</button>
-            <button type="submit" name="excluir">Deletar</button>
             <div style="margin: 10vh auto">
             <table border="3" style="width: 80%;" bgcolor="white" >
               <thead>
                 <tr>
                   <th hidden WIDTH=2>id</th>
-                  <th hidden WIDTH=150>Usuario</th>
                   <th hidden>Comentario</th>
                 </tr>
               </thead>
