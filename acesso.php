@@ -1,7 +1,7 @@
 <?php
  session_start();
  if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-     require("conta.php");
+     require("sysLogin/conta.php");
      $adm = $_SESSION['usuario'][1];
      $cliente = $_SESSION['usuario'][0];
 
@@ -13,6 +13,7 @@
 ?>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Acesso - <?php echo $nome; ?></title>
     </head>
     <body>
@@ -49,6 +50,6 @@
             </table>
         <?php endif; ?>
 
-        <a href="logout.php">Sair</a>
+        <a href="sysLogin/logout.php">Sair</a>
     </body>
 </html>

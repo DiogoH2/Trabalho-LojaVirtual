@@ -8,13 +8,13 @@
                  </a>
               </div>
               <hr>
-                <form action="./login.php" method="post">
+                <form action="sysLogin/login.php" method="post">
                 <div class="row">
                 <div class="offset-9">
                   <input type="text" name="nome" size="10"  placeholder="nome">  
                   <input type="password" name="senha" size="10"  placeholder="Senha"> 
                   <button type="submit" name="entrar">Logar</button> 
-                  <a href="logout.php">Logout</a>
+                  <a href="sysLogin/logout.php">Logout</a>
                  </div> 
                  </div>
                  </form>
