@@ -20,6 +20,11 @@
         <?php if($adm): ?>
             <table width="40%">
                 <thead>
+                <form  action="CrudAdmCliente/controllerAdm.php" method="post">
+                <div style="margin: 10px auto"> 
+                    <input type="text" name="email" size="100"  placeholder="Deletar!!">
+                </div>
+            <button type="submit" name="excluir">Deletar</button>
                     <tr style="font-weight: bold">
                         <td>Email</td>
                         <td>Senha</td>
@@ -37,5 +42,6 @@
         <?php endif; ?>
 
         <a href="sysLogin/logout.php">Sair</a>
+        </form>
     </body>
 </html>

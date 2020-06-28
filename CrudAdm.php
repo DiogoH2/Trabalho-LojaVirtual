@@ -17,3 +17,14 @@ function create ($data){
 
     $conn ->query($sql);
 }
+
+
+
+function del ($email){
+
+
+    $conn = include_once (__DIR__.'/conn.php');
+
+    $sql ="DELETE FROM usuarios Where email = '$email'";
+    $conn ->query($sql);
+}

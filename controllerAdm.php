@@ -10,3 +10,11 @@ if(isset($_POST['criarADM'])){
     header('location: ../ContaAdm.php');
 
 }
+
+if(isset($_POST['excluir'])){
+
+    del ($_POST['email']);
+
+    header('location: ../Acesso.php');
+
+}
