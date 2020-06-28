@@ -30,22 +30,8 @@
                 </thead>
                 <tbody>
                     <?php
-                        $query = $conn->prepare("SELECT * FROM usuarios");
-                        $query->execute();
-                
-                        $users = $query->fetchAll(PDO::FETCH_ASSOC);
-
-                        for($i = 0; $i < sizeof($users); $i++):
-                            $usuarioAtual = $users[$i];
-                    ?>
-                    <tr>
-                        <td><?php echo $usuarioAtual["email"]; ?></td>
-                        <td><?php echo $usuarioAtual["senha"]; ?></td>
-                        <td><?php echo $usuarioAtual["nome"]; ?></td>
-                        <td><?php echo $usuarioAtual["adm"]; ?></td>
-                        <td><?php echo $usuarioAtual["id"]; ?></td>
-                    </tr>
-                    <?php endfor; ?>
+                        include_once(__DIR__.'/CrudAdmCliente/acessoConta.php')
+                       ?>
                 </tbody>            
             </table>
         <?php endif; ?>

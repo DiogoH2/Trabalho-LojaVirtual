@@ -27,6 +27,8 @@
                     <a class="menu" href="chat.php">Comentarios</a>
                     <a class="menu" href="Produtos.php">Produtos</a>
                     <a class="menu" href="Acesso.php">Acesso</a>
+                    <a class="menu" href="ContaCliente.php">Cadastro</a>
+                    <a class="menu" href="contaAdm.php">Cadastro Funcionario</a>
                   </div>  
             </nav> 
             </header> 

@@ -2,7 +2,7 @@
 
     include_once (__DIR__ .'/crud.php');
 
-    $registro = read();
+    $registro = ler();
 
     $html = ' ';
     foreach ($registro as $registros){
