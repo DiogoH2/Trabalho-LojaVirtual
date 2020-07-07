@@ -1,3 +1,8 @@
+<?php
+  //Conexão
+  include_once('php_action/db_connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -6,7 +11,7 @@
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="icon" type="image/jpg" href="image/favicon.jpg">
-    <title>ShoesGO</title>
+    <title>Comentários</title>
   </head>
 <body>
 
@@ -17,12 +22,12 @@
 
 <h1 class="titulos">Comentarios</h1>
     <article class="coment">
-    <form action="Crud/controller.php" method="post">
+    <form action="php_action/criarcomentario.php" method="post">
           <div style="margin: 10px auto"> 
             <input type="text" name="comentario" size="100"  placeholder="Deixe seu comentario aqui!!!">
           </div>
           <div style="margin: 5vh auto">
-            <button type="submit" name="enviar">Enviar</button>
+            <button type="submit" name="btn-cadastrar-coment">Enviar</button>
             <div style="margin: 10vh auto">
             <table border="3" style="width: 80%;" bgcolor="white" >
               <thead>
@@ -32,10 +37,23 @@
                 </tr>
               </thead>
               <tbody>
-              <?php 
-                include_once(__DIR__.'/Crud/registro.php')
-              ?>
+              <?php
+                    $sql = "SELECT * FROM comentarios";
+                    $resultado = mysqli_query($connect, $sql);
+
+                    while($dados = mysqli_fetch_array($resultado)){
+
+                    
+
+                ?>
+
+                <tr>
+                    <td><?php echo $dados['id']; ?></td>
+                    <td><?php echo $dados['comentario']; ?></td>
+              
               </td>
+                </tr>
+                  <?php } ?>
               </tbody>
             </table>
           </div>
