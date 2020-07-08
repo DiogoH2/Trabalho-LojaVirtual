@@ -1,5 +1,6 @@
 <?php
  session_start();
+
  if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
      require("sysLogin/conta.php");
      $adm = $_SESSION['usuario'][1];
@@ -14,10 +15,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Acesso - <?php echo $nome; ?></title>
+        <title>Acesso - <?php echo $cliente; ?></title>
     </head>
     <body>
         <?php if($adm): ?>
+            <title>Acesso - <?php echo $adm; ?></title>
             <table width="40%">
                 <thead>
                 <form  action="CrudAdmCliente/controllerAdm.php" method="post">

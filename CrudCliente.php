@@ -12,6 +12,7 @@ function create ($data){
     $conn = include_once (__DIR__.'/conn.php');
     $campo =implode (",",array_keys($data));
     $valores =implode ("','",$data);
+    
 
     $sql = "INSERT INTO usuarios ($campo) Values ('$valores')";
 

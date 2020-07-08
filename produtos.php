@@ -23,11 +23,31 @@
 <body>
   <div class="container-fluid">
   <?php 
-    include ('./menu.php')
+    include ('./navLog.php')
   ?>
-    <article>
-    
-    </article>
+
+    <h1 class="titulos">Cadastro de Produtos</h1>
+<article>
+    <form action="CrudAdmCliente/controllerAdm.php" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Imagem</label>
+        <input class="form-control" type="text" name="img" placeholder="Url Da imagem">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Nome</label>
+        <input class="form-control" type="text" name="nomeProduto" placeholder="Nome do produto">
+      </div>
+      <div class="form-group">
+      <label for="exampleInputPassword1">Preço</label>
+        <input class="form-control" type="text" name="preço" placeholder="Preço do Produto">
+      </div>
+      <div  class="form-group">
+      <label for="exampleInputPassword1">Oferta</label>
+        <input class="form-control" type="text" name="oferta" maxlength="1"  placeholder="Adm">
+      </div>
+      <button type="submit" class="btn btn-primary" name="criarProduto">Enviar</button>
+    </form>
+  </article>
     <?php 
     include ('./footer.php')
     ?>

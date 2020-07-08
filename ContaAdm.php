@@ -25,7 +25,7 @@
 
 <div class="container-fluid">
 <?php 
-  include ('./menu.php')
+  include ('./navLog.php')
 ?>
 
 <h1 class="titulos">Cadastro Funcionario</h1>
