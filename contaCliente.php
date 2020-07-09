@@ -11,8 +11,8 @@
 <body>
 
 <div class="container-fluid">
-<?php 
-  include ('./navLog.php')
+<?php
+    include ('./navLog.php');
 ?>
 
 <h1 class="titulos">Cadastro</h1>
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Senha</label>
-      <input class="form-control" type="text" name="senha" placeholder="Senha">
+      <input class="form-control" type="password" name="senha" placeholder="Senha">
     </div>
     <div class="form-group">
     <label for="exampleInputPassword1">Nome</label>
@@ -34,7 +34,7 @@
     <label hidden for="exampleInputPassword1">Permissão</label>
       <input hidden class="form-control" type="text" name="adm" value="0" maxlength="1"   placeholder="Adm">
     </div>
-    <button type="submit" class="btn btn-primary" name="criarCliente">Enviar</button>
+    <button type="submit" class="btn btn-primary" name="criarCliente">Cadastrar</button>
   </form>
 </article>
 <br>

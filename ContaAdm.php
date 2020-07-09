@@ -1,15 +1,5 @@
 <?php
- session_start();
- if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-     require("sysLogin/conta.php");
-     $adm = $_SESSION['usuario'][1];
-     $cliente = $_SESSION['usuario'][0];
-
-
- }else{
-
-     echo "<script>window.location = 'index.php'</script>";
- }
+  include_once('./iniciarSession.php')
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,9 +15,9 @@
 
 <div class="container-fluid">
 <?php 
-  include ('./navLog.php')
-?>
+    include ('./navLog.php');
 
+  ?>
 <h1 class="titulos">Cadastro Funcionario</h1>
 <article>
 <form action="CrudAdmCliente/controllerAdm.php" method="post">
@@ -37,7 +27,7 @@
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Senha</label>
-    <input class="form-control" type="text" name="senha" placeholder="Senha">
+    <input class="form-control" type="password" name="senha" placeholder="Senha">
   </div>
   <div class="form-group">
   <label for="exampleInputPassword1">Nome</label>
@@ -47,7 +37,7 @@
   <label hidden  for="exampleInputPassword1">Permissão</label>
     <input hidden class="form-control" type="text" name="adm" value="1" maxlength="1"  placeholder="Adm">
   </div>
-  <button type="submit" class="btn btn-primary" name="criarADM">Enviar</button>
+  <button type="submit" class="btn btn-primary" name="criarADM">Cadastrar</button>
 </form>
 </article>
 <br>
