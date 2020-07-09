@@ -1,3 +1,7 @@
+<?php
+  //Conexão
+  include_once('php_action/db_connect.php');
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,23 +15,33 @@
   </head>
 <body>
     <div class="container-fluid">
-    <?php 
-        include ('./menu.php')
+    <?php
+
+    include ('./menu.php');
+
     ?>
     <article>
+    <form action="php_action/index.php" method="get">
+    <div class="input-group mb-3 col-10 text-center">
+                <input type="text" class="form-control" name="produto" placeholder="Pesquise seu produto!!" aria-label="Comentario" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" name="btn-pesquisar-produto" id="button-addon2">OK</button>
+            </div>
+    </div>
+    </form>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="..." alt="First slide">
+                <img class="d-block w-100"  height="520" src="https://pixabay.com/get/55e5d7404c55a914f1dc84609629307d143fd6e45a4c704c7c2b79d1944ac55c_640.jpg" alt="First slide">
             </div>
              <div class="carousel-item">
-                 <img class="d-block w-100" src="..." alt="Second slide">
+                 <img class="d-block w-100" height="520" src="https://pixabay.com/get/55e5d7404c55a914f1dc84609629307d143fd6e45a4c704c7c2b79d1944ac55c_640.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                 <img class="d-block w-100" src="..." alt="Third slide">
+                 <img class="d-block w-100" height="520" src="https://pixabay.com/get/54e4d645435bae14f1dc84609629307d143fd6e45a4c704c7c2b79d1944ac55c_640.jpg" alt="Third slide">
             </div>
             <div class="carousel-item">
-                 <img class="d-block w-100" src="..." alt="Fourth slide">
+                 <img class="d-block w-100" height="520" src="https://pixabay.com/get/52e3dc404955a814f1dc84609629307d143fd6e45a4c704c7c2b79d19448cc5e_640.jpg" alt="Fourth slide">
             </div>
         </div>
          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -41,86 +55,33 @@
         </div>
     </article><br><br>
     <aside>
+    
     <div class="row"> 
+    <?php
+                if(!isset ($_POST['btn-pesquisar-produto']))
+               {
+                    
+               
+               
+                    $sql = "SELECT * FROM produto ";
+                    $resultado = mysqli_query($connect, $sql);
+               
+               
+                    while($dados = mysqli_fetch_array($resultado)){
+
+                    
+
+                ?>
         <div class="card col-xl-3 offset-xl-3" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+            <img class="card-img-top" src="<?php echo $dados['url_img']; ?>" alt="Imagem de capa do card">
         <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
+            <h5 class="card-title"><?php echo $dados['descricao']; ?></h5>
+            <p class="card-text">Valor: <?php echo "R$ " . $dados['valor']; ?></p>
+            <p class="card-text">Marca: <?php echo $dados['marca']; ?></p>
         </div>
         </div>
-
-        <div class="card col-xl-3 offset-xl-1" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
-        </div>
-        </div>
-
-    </div> 
-    <br>
-    <div class="row"> 
-    <div class="card col-xl-3 offset-xl-3" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
-        </div>
-        </div>
-
-
-        <div class="card col-xl-3 offset-xl-1" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
-        </div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-    <div class="card col-xl-3 offset-xl-3" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
-        </div>
-        </div>
-
-        <div class="card col-xl-3 offset-xl-1" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
-        </div>
-        </div>
-    </div>      
-    <br>
-    <div class="row">
-    <div class="card col-xl-3 offset-xl-3" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
-        </div>
-        </div>
-
-        <div class="card col-xl-3 offset-xl-1" style="width: 10rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-
-        </div>
-        </div>
+            <?php } } ?>
+        
         
     </div> 
     </div> 
