@@ -1,14 +1,5 @@
 <?php
-    session_start();
-    if(isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])){
-        $adm = $_SESSION['usuario'][1];
-        $cliente = $_SESSION['usuario'][0];
-
-
-    }else{
-
-        echo "<script>window.location = 'index.php'</script>";
-    }
+  include_once('./iniciarSession.php')
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,29 +14,30 @@
 <body>
   <div class="container-fluid">
   <?php 
-    include ('./navLog.php')
-  ?>
+    include ('./navLog.php');
+
+    ?>
 
     <h1 class="titulos">Cadastro de Produtos</h1>
 <article>
-    <form action="CrudAdmCliente/controllerAdm.php" method="post">
+    <form action="php_action/cadastrarproduto.php" method="post">
       <div class="form-group">
         <label for="exampleInputEmail1">Imagem</label>
-        <input class="form-control" type="text" name="img" placeholder="Url Da imagem">
+        <input class="form-control" type="text" name="url_img" placeholder="Url Da imagem">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Nome</label>
-        <input class="form-control" type="text" name="nomeProduto" placeholder="Nome do produto">
+        <label for="exampleInputPassword1">Descrição</label>
+        <input class="form-control" type="text" name="descricao" placeholder="Nome do produto">
       </div>
       <div class="form-group">
-      <label for="exampleInputPassword1">Preço</label>
-        <input class="form-control" type="text" name="preço" placeholder="Preço do Produto">
+      <label for="exampleInputPassword1">Valor</label>
+        <input class="form-control" type="double" name="valor" placeholder="Preço do Produto">
       </div>
       <div  class="form-group">
-      <label for="exampleInputPassword1">Oferta</label>
-        <input class="form-control" type="text" name="oferta" maxlength="1"  placeholder="Adm">
+      <label for="exampleInputPassword1">Marca</label>
+        <input class="form-control" type="text" name="marca"   placeholder="Marca">
       </div>
-      <button type="submit" class="btn btn-primary" name="criarProduto">Enviar</button>
+      <button type="submit" class="btn btn-primary" name="btn-criar-produto">Cadastrar</button>
     </form>
   </article>
     <?php 
