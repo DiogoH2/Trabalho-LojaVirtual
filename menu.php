@@ -32,10 +32,5 @@
                   </div>  
             </nav> 
             </header> 
-            </div><br>
-            <div class="input-group mb-3 col-10 text-center">
-                <input type="text" class="form-control" placeholder="Pesquise seu produto!!" aria-label="Comentario" aria-describedby="button-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="button" id="button-addon2">Enviar</button>
-            </div>
-            </div>';
+            </div><br>'
+           ;
