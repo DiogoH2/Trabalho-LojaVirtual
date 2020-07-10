@@ -11,10 +11,7 @@
                 <form action="sysLogin/login.php" method="post">
                 <div class="row">
                 <div class="offset-9">
-                  <input type="text" name="nome" size="10"  placeholder="nome">  
-                  <input type="password" name="senha" size="10"  placeholder="Senha"> 
-                  <button type="submit" name="entrar" class ="btn btn-success">Logar</button> 
-                  <a href="sysLogin/logout.php" class="btn btn-primary">Logout</a>
+                  <a href="sysLogin/logout.php">Logout</a>
                  </div> 
                  </div>
                  </form>
@@ -31,6 +28,11 @@
                     <a class="menu" href="contaAdm.php">Cadastro Funcionario</a>
                   </div>  
             </nav> 
-            </header> 
-            </div><br>'
-           ;
+            </header>
+            </div><br>
+            <div class="input-group mb-3 col-10 text-center">
+                <input type="text" class="form-control" placeholder="Pesquise seu produto!!" aria-label="Comentario" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="button-addon2">Enviar</button>
+            </div>
+            </div>';

@@ -13,8 +13,8 @@
                 <div class="offset-9">
                   <input type="text" name="nome" size="10"  placeholder="nome">  
                   <input type="password" name="senha" size="10"  placeholder="Senha"> 
-                  <button type="submit" name="entrar">Logar</button> 
-                  <a href="sysLogin/logout.php">Logout</a>
+                  <button type="submit" name="entrar" class ="btn btn-success">Logar</button> 
+                  <a href="sysLogin/logout.php" class="btn btn-primary">Logout</a>
                  </div> 
                  </div>
                  </form>

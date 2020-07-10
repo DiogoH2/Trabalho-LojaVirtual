@@ -48,7 +48,7 @@
                 ?>
 
                 <tr>
-                    <td><?php echo $dados['id']; ?></td>
+                    
                     <td><?php echo $dados['comentario']; ?></td>
               
               </td>
